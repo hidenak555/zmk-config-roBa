@@ -29,29 +29,19 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+            key-positions = <11 12>;
         };
 
         eq {
             bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+            key-positions = <18 19>;
+        };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <12 13>;
         };
     };
 
@@ -80,10 +70,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q               &kp W         &kp E          &kp R       &kp T                                            &kp Y      &kp U  &kp I        &kp O            &kp P
+&mt LEFT_CONTROL A  &kp S         &kp D          &kp F       &kp G      &kp LS(LG(S))         &kp LC(SPACE)   &kp H      &kp J  &mt RCTRL K  &mt RIGHT_ALT L  &kp SEMICOLON
+&kp Z               &kp X         &kp C          &kp V       &kp B      &kp LC(NUMBER_1)      &kp BACKSPACE   &kp N      &kp M  &kp COMMA    &kp DOT          &kp SLASH
+&kp LEFT_WIN        &kp LEFT_ALT  &kp LC(LA(L))  &kp ESCAPE  &kp SPACE  &lt 2 LANGUAGE_2      &kp LANGUAGE_1  &kp ENTER                                       &kp UNDERSCORE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
