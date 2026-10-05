@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -29,19 +28,29 @@
     combos {
         compatible = "zmk,combos";
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
+        tab {
+            bindings = <&kp TAB>;
             key-positions = <11 12>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <6 7>;
+        };
+
+        simgle_quote {
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <18 19>;
         };
 
-        semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <12 13>;
+        double_quote {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <30 31>;
         };
     };
 
@@ -70,10 +79,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W         &kp E          &kp R       &kp T                                            &kp Y      &kp U  &kp I        &kp O            &kp P
-&mt LEFT_CONTROL A  &kp S         &kp D          &kp F       &kp G      &kp LS(LG(S))         &kp LC(SPACE)   &kp H      &kp J  &mt RCTRL K  &mt RIGHT_ALT L  &kp SEMICOLON
-&kp Z               &kp X         &kp C          &kp V       &kp B      &kp LC(NUMBER_1)      &kp BACKSPACE   &kp N      &kp M  &kp COMMA    &kp DOT          &kp SLASH
-&kp LEFT_WIN        &kp LEFT_ALT  &kp LC(LA(L))  &kp ESCAPE  &kp SPACE  &lt 2 LANGUAGE_2      &kp LANGUAGE_1  &kp ENTER                                       &kp UNDERSCORE
+&kp Q               &kp W         &kp E          &kp R       &kp T                                              &kp Y      &kp U  &kp I      &kp O    &kp P
+&mt LEFT_CONTROL A  &kp S         &kp D          &kp F       &kp G      &kp LS(LG(S))         &kp LC(SPACE)     &kp H      &kp J  &kt K      &kp L    &mt RCTRL SEMICOLON
+&mt LEFT_SHIFT Z    &kp X         &kp C          &kp V       &kp B      &kp LC(NUMBER_1)      &kp BACKSPACE     &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LEFT_WIN        &kp LEFT_ALT  &kp LC(LA(L))  &kp ESCAPE  &kp SPACE  &lt 6 LANGUAGE_2      &lt 7 LANGUAGE_1  &kp ENTER                             &kp UNDERSCORE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -126,21 +135,21 @@
             >;
         };
 
-        layer_6 {
+        JAVA {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans                               &kp ASTERISK   &kp LPAR          &kp RPAR           &kp MINUS      &kp PLUS
+&trans  &trans  &trans  &trans  &trans  &trans      &kp EXCLAMATION  &kp SEMICOLON  &kp LBRC          &kp RBRC           &kp LESS_THAN  &kp GREATER_THAN
+&trans  &trans  &trans  &trans  &trans  &trans      &kp HASH         &kp COLON      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &kp BACKSLASH
+&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans                                                             &trans
             >;
         };
 
-        layer_7 {
+        ECLIPSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &kp LC(LS(N0))  &kp F3         &trans                      &trans  &kp HOME  &kp UP    &kp END    &trans
+&trans  &trans  &trans          &kp LS(LC(F))  &trans  &trans      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans  &trans  &trans          &trans         &trans  &trans      &trans  &trans  &trans    &trans    &trans     &trans
+&trans  &trans  &trans          &trans         &trans  &trans      &trans  &trans                                 &trans
             >;
         };
     };
