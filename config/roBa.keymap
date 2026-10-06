@@ -79,10 +79,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W         &kp E          &kp R       &kp T                                              &kp Y      &kp U  &kp I      &kp O    &kp P
-&mt LEFT_CONTROL A  &kp S         &kp D          &kp F       &kp G      &kp LS(LG(S))         &kp LC(SPACE)     &kp H      &kp J  &kt K      &kp L    &mt RCTRL SEMICOLON
-&mt LEFT_SHIFT Z    &kp X         &kp C          &kp V       &kp B      &kp LC(NUMBER_1)      &kp BACKSPACE     &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_WIN        &kp LEFT_ALT  &kp LC(LA(L))  &kp ESCAPE  &kp SPACE  &lt 6 LANGUAGE_2      &lt 7 LANGUAGE_1  &kp ENTER                             &kp UNDERSCORE
+&kp Q               &kp W         &kp E         &kp R    &kp T                                              &kp Y      &kp U  &kp I      &kp O    &kp P
+&mt LEFT_CONTROL A  &kp S         &kp D         &kp F    &kp G      &kp LS(LG(S))         &kp BACKSPACE     &kp H      &kp J  &kt K      &kp L    &mt RCTRL SEMICOLON
+&mt LEFT_SHIFT Z    &kp X         &kp C         &kp V    &kp B      &kp ESCAPE            &kp DELETE        &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp ASTERISK        &kp LEFT_WIN  &kp LEFT_ALT  &kp TAB  &kp SPACE  &lt 6 LANGUAGE_2      &lt 7 LANGUAGE_1  &kp ENTER                             &kp BACKSLASH
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -135,16 +135,16 @@
             >;
         };
 
-        JAVA {
+        JAVA_R {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                               &kp ASTERISK   &kp LPAR          &kp RPAR           &kp MINUS      &kp PLUS
-&trans  &trans  &trans  &trans  &trans  &trans      &kp EXCLAMATION  &kp SEMICOLON  &kp LBRC          &kp RBRC           &kp LESS_THAN  &kp GREATER_THAN
-&trans  &trans  &trans  &trans  &trans  &trans      &kp HASH         &kp COLON      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &kp BACKSLASH
-&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans                                                             &trans
+&trans  &trans  &trans  &trans  &trans                             &kp ASTERISK   &kp LPAR          &kp RPAR           &kp MINUS      &kp PLUS
+&trans  &trans  &trans  &trans  &trans  &trans      &kp AMPERSAND  &kp SEMICOLON  &kp LBRC          &kp RBRC           &kp LESS_THAN  &kp GREATER_THAN
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &kp COLON      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                                                             &trans
             >;
         };
 
-        ECLIPSE {
+        JAVA_L {
             bindings = <
 &trans  &trans  &kp LC(LS(N0))  &kp F3         &trans                      &trans  &kp HOME  &kp UP    &kp END    &trans
 &trans  &trans  &trans          &kp LS(LC(F))  &trans  &trans      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
