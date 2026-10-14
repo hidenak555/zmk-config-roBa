@@ -81,8 +81,8 @@
             bindings = <
 &kp Q               &kp W         &kp E         &kp R      &kp T                                                &kp Y      &kp U  &kp I      &kp O    &kp P
 &mt LEFT_CONTROL A  &kp S         &kp D         &kp F      &kp G        &kp LS(LG(S))         &kp BACKSPACE     &kp H      &kp J  &kt K      &kp L    &mt RCTRL SEMICOLON
-&mt LEFT_SHIFT Z    &kp X         &kp C         &kp V      &kp B        &kp ESCAPE            &kp DELETE        &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp ASTERISK        &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 TAB  &lt 1 SPACE  &lt 5 LANGUAGE_2      &lt 6 LANGUAGE_1  &kp ENTER                             &kp BACKSLASH
+&mt LEFT_SHIFT Z    &kp X         &kp C         &kp V      &kp B        &lt 5 ESCAPE          &lt 6 DELETE      &kp N      &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp ASTERISK        &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 TAB  &lt 1 SPACE  &lt 3 LANGUAGE_2      &lt 2 LANGUAGE_1  &kp ENTER                             &kp BACKSLASH
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
